@@ -1,0 +1,187 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*body {
+    background-image: url('/Hintergrund.png');*/ /*  */
+    /*background-size: cover;
+    background-position: center;
+    color: #ffffff;*/ /* Цвет текста */
+    /*padding: 50px;*/ /* Добавление отступов для лучшего чтения текста */
+/*}*/
+.hero-text {
+    background-color: rgba(211, 211, 211, 0.8); /* Светло-серый фон с прозрачностью */
+    color: black; /* Черный текст */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+.content {
+    text-align: center;
+    margin-top: 100px; /* Отступ сверху */
+    background-color: rgba(211, 211, 211, 0.8); /* Светло-серый полупрозрачный фон */
+    color: black; /* Черный текст */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругленные углы */
+    max-width: 600px; /* Максимальная ширина блока */
+    margin-left: auto; /* Центрирование блока */
+    margin-right: auto; /* Центрирование блока */
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+    li img {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-item {
+    position: relative;
+}
+
+.gallery-photo {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+    .gallery-photo:hover {
+        transform: scale(1.05);
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content-comments {
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+#photoModal img {
+    max-width: 100%; /* Уlfkbnm */
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.close, .close-comments {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+    .close:hover, .close:focus, .close-comments:hover, .close-comments:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+button {
+    color: black; /* Установите нужный цвет текста для кнопок */
+    background-color: #007bff; /* Синий фон */
+    border: none; /* Без границы */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель курсора */
+}
+
+    /* Стили для кнопок при наведении */
+    button:hover {
+        color: white; /* Цвет текста при наведении */
+        background-color: #0056b3; /* Темно-синий фон при наведении */
+    }
+
+    /* Стили для белого фона кнопок */
+    button[type="submit"] {
+        color: black; /* Цвет текста для кнопок с белым фоном */
+    }
+
+        button[type="submit"]:hover {
+            color: black; /* Цвет текста при наведении для кнопок с белым фоном */
+            background-color: #cccccc; /* Светло-серый фон при наведении */
+        }
+
+#fileChosen {
+    margin-left: 10px; /* Отступ слева */
+    font-style: italic; /* Курсивный текст */
+    color: black; /* Цвет текста */
+    background-color: white; /* Цвет фона */
+    padding: 5px; /* Внутренний отступ */
+    border-radius: 5px; /* Скругленные углы */
+    border: 1px solid #ddd; /* Граница */
+}

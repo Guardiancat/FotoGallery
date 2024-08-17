@@ -1,0 +1,113 @@
+﻿@model IEnumerable<PhotoGallery.Models.Photo>
+
+@{
+    ViewData["Title"] = "Photo Gallery";
+}
+
+<h1>Фото галерея</h1>
+
+<form id="uploadForm" asp-action="Upload" method="post" enctype="multipart/form-data">
+    <!-- Скрываем стандартный элемент input file -->
+    <input type="file" name="file" id="fileInput" style="display: none;" />
+    <!-- Создаем кастомную кнопку -->
+    <button type="button" id="customFileButton">Choose File</button>
+    <span id="fileChosen">No file chosen</span>
+    <button type="button" id="uploadButton">Upload</button>
+</form>
+
+<hr />
+
+<div class="photo-gallery">
+    @foreach (var photo in Model)
+    {
+        <div class="photo-item">
+            <img src="@Url.Content("~/uploads/" + photo.FilePath)" alt="Photo" class="gallery-photo" data-photo-id="@photo.Id" />
+            <p>Uploaded by: @photo.UploadedBy on @photo.UploadedAt</p>
+            <button class="btn btn-primary view-comments" data-photo-id="@photo.Id">View Comments</button>
+        </div>
+    }
+</div>
+
+<!-- Modal for full-screen photo -->
+<div id="photoModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullPhoto">
+    <div id="caption"></div>
+</div>
+
+<!-- Modal for comments -->
+<div id="commentsModal" class="modal">
+    <span class="close-comments">&times;</span>
+    <div class="modal-content-comments">
+        <h3>Comments</h3>
+        <div id="commentsSection"></div>
+        
+        <form id="commentForm">
+            <input type="hidden" id="photoId" name="PhotoId" value="" />
+            <input type="hidden" name="DatePosted" id="datePosted" value="" />
+            <div class="form-group">
+                <label for="commentText">Comment:</label>
+                <textarea id="commentText" name="Text" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="commentAuthor">Author:</label>
+                <input type="text" id="commentAuthor" name="Author" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Add Comment</button>
+        </form>
+    </div>
+</div>
+
+
+<style>
+    /* Стили для заголовка */
+    h1 {
+        color: black; /* Цвет заголовка */
+    }
+
+    /* Стили для кнопок */
+    button {
+        color: black; /* Цвет текста кнопок */
+        background-color: #007bff; /* Синий фон */
+        border: none; /* Без границы */
+        border-radius: 5px; /* Скругленные углы */
+        padding: 10px 20px; /* Внутренние отступы */
+        font-size: 16px; /* Размер шрифта */
+        cursor: pointer; /* Указатель курсора */
+    }
+
+        /* Стили для кнопок при наведении */
+        button:hover {
+            color: white; /* Цвет текста при наведении */
+            background-color: #0056b3; /* Темно-синий фон при наведении */
+        }
+
+        /* Стили для белого фона кнопок */
+        button[type="submit"] {
+            color: black; /* Цвет текста для кнопок с белым фоном */
+        }
+
+            button[type="submit"]:hover {
+                color: black; /* Цвет текста при наведении для кнопок с белым фоном */
+                background-color: #cccccc; /* Светло-серый фон при наведении */
+            }
+
+    /* Стили для кастомной кнопки выбора файла */
+    #customFileButton {
+        color: black; /* Цвет текста */
+        background-color: white; /* Цвет фона */
+        border: 1px solid #007bff; /* Синяя рамка */
+        border-radius: 5px; /* Скругленные углы */
+        padding: 10px 20px; /* Внутренние отступы */
+        cursor: pointer; /* Указатель курсора */
+    }
+
+        #customFileButton:hover {
+            background-color: #cccccc; /* Цвет фона при наведении */
+        }
+
+    #fileChosen {
+        margin-left: 10px; /* Отступ слева */
+        font-style: italic; /* Курсивный текст */
+    }
+</style>

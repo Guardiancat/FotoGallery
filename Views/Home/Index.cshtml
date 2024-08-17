@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ваш Заголовок</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <style>
+        body {
+            background-image: url('/Hintergrund.png');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* Цвет текста */
+            padding: 50px; /* Добавление отступов для лучшего чтения текста */
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 100px; /* Отступ сверху */
+            background-color: rgba(211, 211, 211, 0.8); /* Светло-серый полупрозрачный фон */
+            color: black; /* Черный текст */
+            padding: 20px; /* Внутренние отступы */
+            border-radius: 10px; /* Скругленные углы */
+            max-width: 600px; /* Максимальная ширина блока */
+            margin-left: auto; /* Центрирование блока */
+            margin-right: auto; /* Центрирование блока */
+        }
+
+        .gallery-button {
+            display: inline-block;
+            margin-top: 20px; /* Отступ сверху */
+            padding: 10px 20px; /* Внутренние отступы */
+            font-size: 16px; /* Размер шрифта */
+            color: white; /* Цвет текста */
+            background-color: #007bff; /* Синий фон */
+            border: none; /* Без границы */
+            border-radius: 5px; /* Скругленные углы */
+            text-decoration: none; /* Без подчеркивания */
+            cursor: pointer; /* Указатель курсора */
+        }
+
+            .gallery-button:hover {
+                background-color: #0056b3; /* Темно-синий фон при наведении */
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Друзья, я выложил сюда свои старые фото.</h1>
+            <p>Предлагаю погрузиться в мир воспоминаний из нашей юности.</p>
+            <p>Я буду рад, если вы добавите сюда свои фото этого времени.</p>
+            <a href="@Url.Action("Index", "Photos")" class="gallery-button">Открыть галерею</a>
+        </div>
+    </div>
+</body>
+</html>
