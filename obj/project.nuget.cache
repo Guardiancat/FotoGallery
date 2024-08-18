@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fSRsudd14/F41lyNaTdmgeqmC8ZyqNqGefsNF8DiY17X1fnBm6vqPJievT7vBpvGoX3IxWEIjSj/krjJ281wvA==",
+  "dgSpecHash": "1QlqdPuIoyVBr7KdYBLmMF3KKL8/EzUaKRW7340utLkBFwKGlktGNpXtLeloqeCzdIeAlqE/8HCYiwYxchFXfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tsymb\\source\\repos\\FotoGallery\\FotoGallery\\PhotoGallery.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "C:\\Users\\tsymb\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.1.2\\microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\tsymb\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
