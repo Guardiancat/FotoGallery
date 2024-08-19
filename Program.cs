@@ -53,17 +53,6 @@ builder.Services.AddCors(options =>
 });
 
 // Настройка защиты данных
-
-string accountKey = "SGVsbG9Xb3JsZCEyMzQ1Njc4OQ==";
-string accountName = "Uknow";
-var storageAccount = new CloudStorageAccount(
-    new StorageCredentials(accountName, accountKey), true);
-var blobClient = storageAccount.CreateCloudBlobClient();
-var container = blobClient.GetContainerReference("<container-name>");
-
-builder.Services.AddDataProtection()
-    .PersistKeysToAzureBlobStorage(container, "<blob-name>")
-    .ProtectKeysWithAzureKeyVault("<Key Vault URI>", "<client-id>", "<client-secret>");
 var app = builder.Build();
 
 // Настройка конвейера обработки запросов
