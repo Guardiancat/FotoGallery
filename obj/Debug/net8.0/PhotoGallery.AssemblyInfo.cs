@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhotoGallery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b98d88bae98e0ad9d671033679bae789bc156dd0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9cb8337f9b447c9bd6f3d06b1150b962fa0e728")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhotoGallery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhotoGallery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
