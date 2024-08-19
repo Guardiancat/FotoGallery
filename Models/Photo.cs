@@ -11,20 +11,20 @@ namespace PhotoGallery.Models
         public int Id { get; set; }
 
         [Required]
-        public string Url { get; set; }
+        public string Url { get; set; } = string.Empty;
 
         [Required]
-        public string FilePath { get; set; }
+        public string FilePath { get; set; }= string.Empty;
 
         [Required]
-        public string UploadedBy { get; set; }
+        public string UploadedBy { get; set; }=string.Empty;
 
         [Required]
         public DateTime UploadDate { get; set; }
 
-        public string Description { get; set; }
+        public string Description { get; set; }=string.Empty ;
 
-        public ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }=new List<Comment>();
 
         public DateTime UploadedAt { get; set; }
     }
