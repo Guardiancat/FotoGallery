@@ -28,16 +28,16 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
 builder.Services.AddControllersWithViews();
 
 // Настройка аутентификации
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-})
-.AddCookie(options =>
-{
-    options.Cookie.SecurePolicy = CookieSecurePolicy.None; // 
-});
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+//})
+//.AddCookie(options =>
+//{
+//    options.Cookie.SecurePolicy = CookieSecurePolicy.None; // 
+//});
 // .AddGoogle(options =>
 // {
 //     IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
@@ -53,8 +53,11 @@ builder.Services.AddCors(options =>
 });
 
 // Настройка защиты данных
+
+string accountKey = "SGVsbG9Xb3JsZCEyMzQ1Njc4OQ==";
+string accountName = "Uknow";
 var storageAccount = new CloudStorageAccount(
-    new StorageCredentials("<account-name>", "<account-key>"), true);
+    new StorageCredentials(accountName, accountKey), true);
 var blobClient = storageAccount.CreateCloudBlobClient();
 var container = blobClient.GetContainerReference("<container-name>");
 
