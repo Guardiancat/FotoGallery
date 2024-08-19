@@ -3,6 +3,16 @@ using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using PhotoGallery.Data;
+using Microsoft.AspNetCore.DataProtection;
+using Azure.Identity;
+using Azure.Storage.Blobs;
+using Azure.Security.KeyVault.Keys.Cryptography;
+using Azure.Security.KeyVault.Keys;
+using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
+using System.Net;
+using Microsoft.Azure.Storage.Auth;
+using Microsoft.Azure.Storage;
+using Microsoft.Azure.Storage.Blob;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
@@ -32,14 +42,14 @@ builder.Services.AddAuthentication(options =>
 })
 .AddCookie(options =>
 {
-    options.Cookie.SecurePolicy = CookieSecurePolicy.None; // Измените на None
+    options.Cookie.SecurePolicy = CookieSecurePolicy.None; // 
 });
-//.AddGoogle(options =>
-//{
-//    IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
-//    options.ClientId = googleAuthNSection["ClientId"];
-//    options.ClientSecret = googleAuthNSection["ClientSecret"];
-//});
+// .AddGoogle(options =>
+// {
+//     IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
+//     options.ClientId = googleAuthNSection["ClientId"];
+//     options.ClientSecret = googleAuthNSection["ClientSecret"];
+// });
 
 // Добавление CORS-политики
 builder.Services.AddCors(options =>
@@ -48,6 +58,15 @@ builder.Services.AddCors(options =>
         builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 });
 
+// Настройка защиты данных
+var storageAccount = new CloudStorageAccount(
+    new StorageCredentials("<account-name>", "<account-key>"), true);
+var blobClient = storageAccount.CreateCloudBlobClient();
+var container = blobClient.GetContainerReference("<container-name>");
+
+builder.Services.AddDataProtection()
+    .PersistKeysToAzureBlobStorage(container, "<blob-name>")
+    .ProtectKeysWithAzureKeyVault("<Key Vault URI>", "<client-id>", "<client-secret>");
 var app = builder.Build();
 
 // Настройка конвейера обработки запросов

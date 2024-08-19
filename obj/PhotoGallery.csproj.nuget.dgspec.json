@@ -50,6 +50,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "Azure.Security.KeyVault.Keys": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.21.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.Google": {
               "target": "Package",
               "version": "[8.0.5, )"
@@ -58,9 +70,21 @@
               "target": "Package",
               "version": "[8.0.5, )"
             },
+            "Microsoft.AspNetCore.DataProtection.AzureKeyVault": {
+              "target": "Package",
+              "version": "[3.1.24, )"
+            },
+            "Microsoft.AspNetCore.DataProtection.AzureStorage": {
+              "target": "Package",
+              "version": "[3.1.24, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.5, )"
+            },
+            "Microsoft.Azure.KeyVault": {
+              "target": "Package",
+              "version": "[3.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
