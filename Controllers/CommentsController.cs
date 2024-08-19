@@ -56,6 +56,7 @@ namespace PhotoGallery.Controllers
 
             
         }
+
         // GET: Comments/PhotoWithComments
         [HttpGet("PhotoWithComments/{photoId}")]
         public async Task<IActionResult> PhotoWithComments(int photoId)

@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\upload\\Снимок экрана (8).png"
     },
     {
+      "Id": "C:\\Users\\tsymb\\source\\repos\\FotoGallery\\FotoGallery\\wwwroot\\uploads\\1foto.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\1foto.jpeg"
+    },
+    {
       "Id": "C:\\Users\\tsymb\\source\\repos\\FotoGallery\\FotoGallery\\wwwroot\\uploads\\61.png",
       "PackagePath": "staticwebassets\\uploads\\61.png"
     },

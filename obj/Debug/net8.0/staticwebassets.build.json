@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+EKzChkuEEw7q45QAxgn/8Luxr/DUnoOSvjamnQdihc=",
+  "Hash": "0ir2Lb3MXaAGJGrUYEYsXiuLO0CrCZH9JDDvNOLVxo8=",
   "Source": "PhotoGallery",
   "BasePath": "_content/PhotoGallery",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\Снимок экрана (8).png"
+    },
+    {
+      "Identity": "C:\\Users\\tsymb\\source\\repos\\FotoGallery\\FotoGallery\\wwwroot\\uploads\\1foto.jpeg",
+      "SourceId": "PhotoGallery",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tsymb\\source\\repos\\FotoGallery\\FotoGallery\\wwwroot\\",
+      "BasePath": "_content/PhotoGallery",
+      "RelativePath": "uploads/1foto.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1foto.jpeg"
     },
     {
       "Identity": "C:\\Users\\tsymb\\source\\repos\\FotoGallery\\FotoGallery\\wwwroot\\uploads\\61.png",
