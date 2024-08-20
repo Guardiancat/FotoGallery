@@ -11,10 +11,13 @@ using Microsoft.Azure.Storage.Blob;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
+
 // Настройка подключения к базе данных
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Настройка Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
@@ -75,9 +78,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.Migrate();
-}
+
+
+
 app.Run();
