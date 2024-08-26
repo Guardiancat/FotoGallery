@@ -11,42 +11,20 @@ using Microsoft.Azure.Storage.Blob;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
-
-// Настройка подключения к базе данных
+// Настройка подключения к базе данных PostgreSQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(connectionString));
 
 // Настройка Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
     options.SignIn.RequireConfirmedAccount = true;
-    // Другие настройки Identity
 })
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
 
 // Добавление контроллеров с представлениями
 builder.Services.AddControllersWithViews();
-
-// Настройка аутентификации
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-//})
-//.AddCookie(options =>
-//{
-//    options.Cookie.SecurePolicy = CookieSecurePolicy.None; // 
-//});
-// .AddGoogle(options =>
-// {
-//     IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
-//     options.ClientId = googleAuthNSection["ClientId"];
-//     options.ClientSecret = googleAuthNSection["ClientSecret"];
-// });
 
 // Добавление CORS-политики
 builder.Services.AddCors(options =>
@@ -78,7 +56,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
 
 app.Run();

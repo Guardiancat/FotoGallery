@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uO6aDXGGQEVhGI5wsV77SOcBlf3xs2zIppJgmthJbFgjxoSLkxCFUvLHD1TcPUJT/YgDoQcOoFIHnqTkeh9GNA==",
+  "dgSpecHash": "c8Q0c8keQjgaOM18mcFJrix3ymwi6fZc9WsdR+yEA+uCykRyN9VvszhiU2/Ir+b9YfyQrbIopE9LnUd2y3erug==",
   "success": true,
   "projectFilePath": "C:\\Users\\tsymb\\source\\repos\\FotoGallery\\FotoGallery\\PhotoGallery.csproj",
   "expectedPackageFiles": [
@@ -79,6 +79,8 @@
     "C:\\Users\\tsymb\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\netstandard.library\\2.0.1\\netstandard.library.2.0.1.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
+    "C:\\Users\\tsymb\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
+    "C:\\Users\\tsymb\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\tsymb\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

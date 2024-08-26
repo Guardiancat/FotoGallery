@@ -215,3 +215,5 @@ C:\Users\tsymb\source\repos\FotoGallery\FotoGallery\bin\Debug\net8.0\ko\System.S
 C:\Users\tsymb\source\repos\FotoGallery\FotoGallery\bin\Debug\net8.0\ru\System.Spatial.resources.dll
 C:\Users\tsymb\source\repos\FotoGallery\FotoGallery\bin\Debug\net8.0\zh-Hans\System.Spatial.resources.dll
 C:\Users\tsymb\source\repos\FotoGallery\FotoGallery\bin\Debug\net8.0\zh-Hant\System.Spatial.resources.dll
+C:\Users\tsymb\source\repos\FotoGallery\FotoGallery\bin\Debug\net8.0\Npgsql.dll
+C:\Users\tsymb\source\repos\FotoGallery\FotoGallery\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

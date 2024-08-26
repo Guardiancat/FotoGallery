@@ -237,7 +237,7 @@ namespace PhotoGallery.Migrations
 
                     b.HasIndex("PhotoId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("PhotoGallery.Models.Photo", b =>
@@ -270,7 +270,7 @@ namespace PhotoGallery.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Photos");
+                    b.ToTable("Photos", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
